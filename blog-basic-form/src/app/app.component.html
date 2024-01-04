@@ -1,0 +1,63 @@
+<h1>{{title}}</h1>
+<h1 appRedEl>{{title}}</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+<h1>Reactive Form</h1>
+<form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+  <input type="text" name="user" placeholder="Enter Username" formControlName="user">
+  <br /> 
+  <span *ngIf="user && user.invalid && user.touched" style="color: red;">please enter value input</span>
+  <br />
+  <input type="password" name="password" placeholder="Enter Password" formControlName="password">
+  <br /> <br />
+  <button [disabled]="loginForm.invalid">Login</button>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <h1>Basic Form</h1>
+<form #basicForm="ngForm" (ngSubmit)="getData(basicForm.value)">
+  <input type="text" name="user" placeholder="Enter Username" ngModel>
+  <br /> <br />
+  <input type="text" name="email" placeholder="Enter Email" ngModel>
+  <br /> <br />
+  <input type="password" name="password" placeholder="Enter Password" ngModel>
+  <br /> <br />
+  <button>Register</button>
+</form>
+
+<ul>
+  <li>{{userData.user}}</li>
+  <li>{{userData.emai}}</li>
+  <li>{{userData.password}}</li>
+</ul>
+
+<h1>{{title | uppercase | slice : 4:5}}</h1>
+<h2>{{2.3 | number : '2.3-5'}}</h2>
+<h2>{{"hi how are you " | titlecase}}</h2>
+
+<h2>{{20 | usdInr}}</h2> -->

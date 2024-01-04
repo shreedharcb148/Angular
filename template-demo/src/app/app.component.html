@@ -1,0 +1,32 @@
+
+<!--interpolation-->
+<h1>{{title}}</h1>
+
+<!--property binding-->
+<div>
+  <img [src]="imgUrl" alt="image ">
+</div>
+
+<!--event binding-->
+<div>
+  <button (click)="incrementCount()">click</button>
+  <p>clicked {{count}} times</p>
+</div>
+
+<!--two way binding-->
+<div>
+  <input #nameRef type="text" [(ngModel)]="name">
+  <p>Welcome {{name}}</p>
+</div>
+
+<!--split two way binding-->
+<div>
+  <input type="text" [ngModel]="userName" (ngModelChange)="method($event)">
+  <p>Welcome {{userName}}</p>
+</div>
+
+<!--getters and setters-->
+<div>
+  <input type="text" [(ngModel)]="customerName">
+  <p>Welcome {{customerName}}</p>
+</div>
